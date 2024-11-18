@@ -5,6 +5,8 @@
     box-sizing: border-box;
 }
 
+/*  HEADER */
+
 header{
     display: flex;
     justify-content: flex-end;
@@ -12,22 +14,122 @@ header{
     background-color: #181818;
     height: 80px;
     width: 100%;
+    position: sticky;
+    top:0;
 }
 
 .nav-list{
     display: flex;
     list-style: none;
     margin-right: 28px;
-    /* gap: 25px; */
 }
 
 .nav-list a{
     text-decoration: none;
     color: #ddd;
     padding: 15px;
+    transition: 0.9s;
+    font-size: 20px;
 }
 
 .nav-list a:hover{
-    transition: 1s;
     color: #fff;
+}
+
+
+/* MAIN */
+
+.intro{
+    display: flex;
+    align-items: center;
+    background-image: url(images/programador.png);
+    background-size: cover;
+    height: calc(100vh - 80px); /* diminuimos o tamanho total da tela com o tamanho fixo do header*/
+    width: 100%;
+    padding-left: 10%;
+
+}
+
+.intro h1{
+    color: white;
+    font-size: 54px;
+}
+
+.intro p{
+    font-size: 24px;
+    font-style: italic;
+    color: blue;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.intro button{
+    border: 0;
+    border-radius: 4px;
+    margin-top: 15px;
+    padding: 14px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: 0.9s;
+}
+
+.intro button:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.intro a{
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+}
+
+/* SOBRE */
+
+.sobre{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px 10%;
+}
+
+.sobre div{
+    max-width: 50%;
+    padding-right: 40px;
+}
+
+.sobre img{
+    max-width: 450px;
+    border: 8px;
+}
+
+
+/* PROJETOS */
+.projetos{
+    width: 100%;
+    padding: 80px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.projetos h2{
+    font-size: 23px;
+}
+
+.projetos p{
+    font-style: italic;
+}
+
+.projetos div{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    
+}
+
+.projetos img{
+    width: 350px;
 }
