@@ -5,6 +5,14 @@
     box-sizing: border-box;
 }
 
+body{
+    font-family:'Roboto', sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
 /*  HEADER */
 
 header{
@@ -16,15 +24,16 @@ header{
     width: 100%;
     position: sticky;
     top:0;
+    z-index: 9;
 }
 
-.nav-list{
+#nav-list{
     display: flex;
     list-style: none;
     margin-right: 28px;
 }
 
-.nav-list a{
+#nav-list a{
     text-decoration: none;
     color: #ddd;
     padding: 15px;
@@ -32,14 +41,14 @@ header{
     font-size: 20px;
 }
 
-.nav-list a:hover{
+#nav-list a:hover{
     color: #fff;
 }
 
 
 /* MAIN */
 
-.intro{
+#intro{
     display: flex;
     align-items: center;
     background-image: url(images/programador.png);
@@ -50,20 +59,20 @@ header{
 
 }
 
-.intro h1{
+#intro h1{
     color: white;
     font-size: 54px;
 }
 
-.intro p{
+#intro p{
     font-size: 24px;
     font-style: italic;
-    color: blue;
+    color: #1e96fc;
     margin-top: 10px;
     margin-bottom: 20px;
 }
 
-.intro button{
+#intro button{
     border: 0;
     border-radius: 4px;
     margin-top: 15px;
@@ -73,12 +82,12 @@ header{
     transition: 0.9s;
 }
 
-.intro button:hover{
+#intro button:hover{
     cursor: pointer;
     transform: scale(1.1);
 }
 
-.intro a{
+#intro a{
     font-weight: bold;
     color: black;
     text-decoration: none;
@@ -86,7 +95,7 @@ header{
 
 /* SOBRE */
 
-.sobre{
+#sobre{
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -94,19 +103,19 @@ header{
     padding: 80px 10%;
 }
 
-.sobre div{
+#sobre div{
     max-width: 50%;
     padding-right: 40px;
 }
 
-.sobre img{
+#sobre img{
     max-width: 450px;
     border: 8px;
 }
 
 
 /* PROJETOS */
-.projetos{
+#projetos{
     width: 100%;
     padding: 80px 0;
     display: flex;
@@ -114,22 +123,113 @@ header{
     align-items: center;
 }
 
-.projetos h2{
-    font-size: 23px;
+#projetos h2{
+    font-size: 32px;
+    margin-bottom: 8px;
 }
 
-.projetos p{
+#projetos p{
     font-style: italic;
+    margin-bottom: 30px;
 }
 
-.projetos div{
+#projetos div{
+    width: 100%;
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
-
+    margin-bottom: 8px;
+    gap: 10px;
     
 }
 
-.projetos img{
-    width: 350px;
+#projetos img{
+    width: 22%;
+    opacity: 0.8;
+    transition: 0.9s;
+}
+
+#projetos img:hover{
+    opacity: 1;
+    transform: scale(1.1);
+    margin: 10px;
+}
+
+#projetos button{
+    margin-top: 10px;
+    background-color: #181818;
+    color: white;
+    border: 0;
+    border-radius: 4px;
+    padding: 10px;
+    transition: 0.7s;
+}
+
+#projetos button:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+
+}
+
+/* RODAPE */
+
+footer{
+    width: 100%;
+    padding: 70px;
+    background-color: #181818;
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer h3{
+    margin-right: 10px;
+}
+
+/*  RESPONSIVIDADE */
+
+@media (max-width: 1057px){
+    #intro h1{
+        font-size: 45px;
+    }
+
+    #intro p{
+        font-size: 18px;
+    }
+
+    #sobre{
+        flex-direction: column;
+        padding: 20px 0;
+    }
+
+    #sobre div{
+        max-width: 80%;
+    }
+
+    #sobre div h2{
+        font-size: 34px;
+        margin-bottom: 10px;
+    }
+
+    #sobre img{
+        width: 80%;
+        margin-top: 30px;
+    }
+
+    #projetos img{
+        width: 29%;
+    }
+
+    footer{
+        flex-direction: column;
+    }
+
+    footer h3{
+        margin: 0;
+        margin-bottom: 8px;
+        font-size: 20px;
+    }
 }
